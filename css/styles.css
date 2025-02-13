@@ -1,78 +1,91 @@
-/* Estilos generales */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Navbar */
-.navbar {
-    background-color: #333;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    color: white;
-}
-
-.logo a {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    color: #333;
     margin: 0;
     padding: 0;
 }
 
-.nav-links li {
-    display: inline;
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
 }
 
-.nav-links a {
+button {
+    background: linear-gradient(45deg, #ff6600, #ff4500);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ff4500, #ff6600);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ff6600;
+}
+
+.navbar a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
-    transition: 0.3s;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: #f4a261;
+.navbar a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
 }
 
-/* Botón de menú para móviles */
-.menu-toggle {
-    display: none;
-    font-size: 25px;
-    cursor: pointer;
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Responsivo para móviles */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #333;
-        text-align: center;
-    }
-
-    .nav-links li {
-        padding: 10px;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
+.card:hover {
+    transform: scale(1.05) rotate(-1deg);
 }
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 102, 0, 0.2);
+    transform: rotate(30deg);
+}
+
+.button-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
