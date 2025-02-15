@@ -14,6 +14,7 @@
 
         if ($query -> execute()) {
             echo "<p>Producto agregado</p>";
+            header("Location: productos.php?success=1");
         } else {
             echo "<p>Error al agregar el producto " . $query -> error ."</p>";
         }
@@ -30,34 +31,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Ingresar Producto</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <?php include "includes/navbar.php"; ?>
-    <h2>Agregar Producto</h2>
-    <form method="POST">
-        <label>Nombre:</label>
-        <input type="text" name="nombre" required>
+    <div class="container">
+        <div class="container_form">
+            <h2>Agregar Producto</h2>
+            <form class="form" method="POST">
+                <label>Nombre:</label>
+                <input type="text" name="nombre" required>
 
-        <label>Descripción:</label>
-        <textarea name="descripcion"></textarea>
+                <label>Descripción:</label>
+                <textarea name="descripcion"></textarea>
 
-        <label>Categoría:</label>
-        <select name="categoria">
-            <option value="bebidas calientes">Bebidas Calientes</option>
-            <option value="bebidas frias">Bebidas Frías</option>
-            <option value="postres">Postres</option>
-            <option value="snacks">Snacks</option>
-        </select>
+                <label>Categoría:</label>
+                <select name="categoria">
+                    <option value="" disabled selected>Seleccione una opción</option>
+                    <option value="bebidas calientes">Bebidas Calientes</option>
+                    <option value="bebidas frias">Bebidas Frías</option>
+                    <option value="postres">Postres</option>
+                    <option value="snacks">Snacks</option>
+                </select>
 
-        <label>Precio:</label>
-        <input type="number" step="0.01" name="precio" required>
+                <label>Precio:</label>
+                <input type="number" step="0.01" name="precio" required>
 
-        <label>Imagen Producto: </label>
-        <input type="text" name="imagen" required>
+                <label>Link Imagen del Producto: </label>
+                <input type="text" name="imagen" required>
 
-        <button type="submit">Guardar Producto</button>
-    </form>
+                <button class="btn" type="submit">Guardar Producto</button>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>

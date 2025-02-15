@@ -16,36 +16,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lista de Pedidos</title>
+    <link rel="stylesheet" href="./css/style.css">
+    
 </head>
 <body>
     <?php include "includes/navbar.php"; ?>
 
-    <h1>Pedidos</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>N°</th>
-                <th>Imgen</th>
-                <th>Producto</th>
-                <th>Descripción</th>
-                <th>Categoría</th>
-                <th>Precio</th>
-                <th>Personalización</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($orders as $order) { ?>
+    <div class="container">
+        <h1>Pedidos</h1>
+        <table>
+            <thead>
                 <tr>
-                    <td><?php echo $order["id_pedido"]?></td>
-                    <td><img src="<?php echo $order["imagen_producto"]?>" alt="<?php echo $order["nombre"] ?>"></td>
-                    <td><?php echo $order["nombre"] ?></td>
-                    <td><?php echo $order["descripcion"] ?></td>
-                    <td><?php echo $order["categoria"] ?></td>
-                    <td><?php echo $order["precio"] ?></td>
-                    <td><?php echo $order["personalizacion"] ?></td>
+                    <th>N°</th>
+                    <th>Producto</th>
+                    <th>Descripción</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Personalización</th>
                 </tr>
-            <?php } ?>
-        </tbody>
+            </thead>
+            <tbody>
+                <?php foreach ($orders as $order) { ?>
+                    <tr>
+                        <td><?php echo $order["id_pedido"]?></td>
+                        <td><?php echo $order["nombre"] ?></td>
+                        <td><?php echo $order["descripcion"] ?></td>
+                        <td><?php echo $order["categoria"] ?></td>
+                        <td><?php echo $order["precio"] ?></td>
+                        <td><?php echo $order["personalizacion"] ?></td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

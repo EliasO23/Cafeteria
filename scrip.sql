@@ -8,10 +8,10 @@ CREATE TABLE productos(
     id_producto INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(100) NOT NULL,
     descripcion TEXT,
-    categoria ENUM('bebidas calientes', 'bebidas frias', 'postres', 'snacks');
+    categoria ENUM('bebidas calientes', 'bebidas frias', 'postres', 'snacks'),
     precio DECIMAL(5,2) NOT NULL,
     imagen_producto TEXT,
-    activo  BOOLEAN DEFAULT TRUE
+    activo  BOOLEAN DEFAULT TRUE,
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

@@ -41,23 +41,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Realizar Orden</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <?php include "includes/navbar.php"; ?>
+    <div class="container">
+        <div class="container_form">
+            <h2>Realizar Orden</h2>
+            <form class="form" method="POST">
+                <label>Producto:</label>
+                <input type="text" name="producto" value="<?php echo $producto['nombre']; ?>" readonly>
 
-    <h2>Realizar Orden</h2>
-    <form method="POST">
-        <label>Producto:</label>
-        <input type="text" name="producto" value="<?php echo $producto['nombre']; ?>" readonly>
+                <input type="hidden" name="producto_id" value="<?php echo $producto['id_producto']; ?>">
 
-        <input type="hidden" name="producto_id" value="<?php echo $producto['id_producto']; ?>">
+                <label>Personalización:</label>
+                <input type="text" name="personalizacion" placeholder="Ej. Sin azúcar, con extra crema">
 
-        <label>Personalización:</label>
-        <input type="text" name="personalizacion" placeholder="Ej. Sin azúcar, con extra crema">
-
-        <button type="submit">Enviar Orden</button>
-    </form>
+                <button class="btn" type="submit">Enviar Orden</button>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>

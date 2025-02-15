@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 20px;
+}
+
+.container_form {
+    background: rgb(241, 240, 240);
+    margin: 4rem auto;
+    padding: 2rem 4rem;
+    border-radius: 8px;
+    width: 40vw;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 3rem;
+    color: white;
+}
+
+.logo a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f4a261;
+}
+
+/* Botón de menú para móviles */
+.menu-toggle {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .nav-links li {
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Pagina Desarrolladores */
+.team {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 2rem
+}
+
+/* Estilos de las cards */
+.card_team {
+    width: 25vw;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.card_team h2, p {
+    text-align: left;
+}
+
+/* Efecto hover */
+.card_team:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+/* Estilos para la imagen */
+.card_team img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+/* Estilos para el texto */
+.card_team h2 {
+    margin: 10px 0;
+    color: #007bff;
+}
+
+.card_teamp {
+    color: #555;
+}
+
+
+/* Pagina de Productos */
+.card { 
+    background: #f1f1f1; 
+    padding: 15px; 
+    margin: 10px; 
+    display: inline-block; 
+    width: 250px; 
+    text-align: center; 
+    border-radius: 10px; 
+}
+
+.card p{
+    text-align: center;
+}
+
+img { 
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+}
+
+button { 
+    background-color: #28a745; 
+    color: white; 
+    font-weight: 700;
+    padding: 10px 20px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: .5rem; 
+}
+
+.card:hover { 
+    box-shadow: 0px 5px 15px rgba(40, 244, 54, 0.7);
+}
+
+/* Formulario Productos */
+/* Títulos */
+h2 {
+    color: #30992c;
+    margin-bottom: 2rem;
+}
+
+/* Estilos del formulario */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Etiquetas */
+label {
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Campos de entrada */
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    margin-top: 1rem;
+}
+
+
+/* Tabla Pedidos */
+table {
+    width: 100%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    background: white;
+}
+
+/* Estilos para encabezados */
+th {
+    background-color:#28a745;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Estilos para filas */
+td {
+    padding: .8rem;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Alternar colores en filas */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Efecto hover */
+tbody tr:hover {
+    background-color: #cce5ff;
+    transition: 0.3s;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
