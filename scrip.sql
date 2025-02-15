@@ -25,4 +25,4 @@ CREATE TABLE pedidos(
 
 
 INSERT INTO productos (nombre, descripcion, categoria, precio, imagen_producto, activo) VALUES
-('Pastel de Chocolate', 'Delicioso pastel con cobertura de chocolate.', 'postres', 4.00, '', 1)
+('Pastel de Chocolate', 'Delicioso pastel con cobertura de chocolate.', 'postres', 4.00, 'https://i0.wp.com/sarasellos.com/wp-content/uploads/2024/03/pastel-de-chocolate.jpeg?resize=768%2C768&ssl=1', 1)
